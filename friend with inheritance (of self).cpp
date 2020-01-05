@@ -4,6 +4,9 @@ class Base {
         return 3;
     }
     friend void fun(Base*);
+    ///// But if we write the following instead, it will not work, because friend is not inherited to child class!
+    // class Derived;
+    // friend void fun(Derived*);
 };
 class Derived : public Base {
               // NOTE if there is no public, 
